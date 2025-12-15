@@ -1,26 +1,32 @@
-// const grade=+process.argv[2];
-// if(Number.isNaN(grade)||grade<0){
-//     console.log('Invalid Input');
-//     process.exit()}
-// console.log(grade>=80 ? "A" : grade >=70 ? "B"
-//     : grade>=60 ? "C" :grade>=50 ? "D" : "F")
-const input = process.argv[2];
-const point = Number(input)
-export {}
-if (Number.isNaN(point)) {
-    console.log('Invalid Input');
-}else if (point < 0 || point > 100){
-    console.log('Invalid Input');
-}else{
-    if (point >= 80){
-        console.log('A');
-    }else if(point >= 70){
-        console.log('B');
-    }else if(point >=60){
-        console.log('C');
-    }else if(point >=50){
-        console.log('D');
-    }else {
-       console.log('F');
-    }
+let word = (process.argv[2])
+let Input1 = Number(word);
+
+
+
+if(Number.isNaN(Input1)||(Input1 < 0) ||
+ (Input1 > 100) || word === '' ){
+   console.log("Invalid Input");
+   process.exit();
 }
+
+if(Input1 >= 50 && Input1 < 60){
+  console.log("Grade is D");
+}
+
+else if(Input1 >= 60 && Input1 < 70){
+  console.log("Grade is C");
+}
+
+else if(Input1 >= 70 && Input1 < 80){
+  console.log("Grade is B");
+}
+
+else if(Input1 >= 80 && Input1 <= 100){
+  console.log("Grade is A");
+}
+
+else if (Input1 >= 0 && Input1 < 50){
+  console.log("Grade is F");
+}
+
+export {};

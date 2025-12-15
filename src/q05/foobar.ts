@@ -1,6 +1,7 @@
 export{};
 const input=+process.argv[2];
 if(Number.isNaN(input) || input<=0){
+    console.log("Invalid input")
     process.exit()
 }
 for(let i =1;i<=input;i++){
