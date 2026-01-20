@@ -1,5 +1,5 @@
 const n:number = parseFloat(process.argv[2]);
-if(isNaN(n)||n<0){
+if(isNaN(n)||n<0||!Number.isInteger(n)){
     console.log("Invalid Input");
 }
 else{
@@ -7,5 +7,5 @@ else{
     for(let i = 1;i<=n;i++){
             result = result * i;
     }
-    console.log(result);
+    console.log(`${result}`);
 }
