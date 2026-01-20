@@ -30,7 +30,7 @@
 
 // export {};
 export{};
-const score=parseFloat(process.argv[2]);
+const score=Number(parseFloat(process.argv[2]));
 
 if(isNaN(score) || score < 0||score>100){
   console.log("Invalid Input");
