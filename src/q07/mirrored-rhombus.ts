@@ -1,15 +1,27 @@
-const size = +process.argv[2];
-if(Number.isNaN(size) || size<=0){
-    process.exit()
+const n:number = parseFloat(process.argv[2]);
+if(isNaN(n)||n<1||!Number.isInteger(n)){
+    console.log("Invalid Input")
+}else{
+    for(let row = 0;row<n;row++){
+        console.log(" ".repeat(row) + "*".repeat(n));
+  }
 }
-for(let i = 0;i<size;i++){
-    let row = '';
-    for(let k = size-i-1;k > 0;k--) {
-        row += " ";
-    }
-    for(let j = 0;j < size;j++){
-        row +="*"
-    }
-    console.log(row);
-}
-export {};
+
+
+//const n: number = parseFloat(process.argv[2]);
+// if (Number.isNaN(n) || n < 1 || !Number.isInteger(n)) {
+//   console.log('Invalid Input');
+//   } 
+// else {
+//   for (let row = 0; row < n; row++) {
+//     let line = "";
+//     for (let s = 0; s < row; s++) {
+//       line += " ";
+//     }
+//     for (let star = 0; star < n; star++) {
+//       line += "*";
+//     }
+
+//     console.log(line);
+//   }
+// }

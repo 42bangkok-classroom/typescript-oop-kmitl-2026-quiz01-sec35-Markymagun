@@ -1,17 +1,18 @@
-export{};
-const input=+process.argv[2];
-if(Number.isNaN(input) || input<=0){
-    console.log("Invalid input")
-    process.exit()
+const n: number = parseFloat(process.argv[2]);
+if(isNaN(n)|| n < 1 ||!Number.isInteger(n)){
+    console.log("Invalid Input");
 }
-for(let i =1;i<=input;i++){
-    if(i%3 ===0 && i%7===0){
-        console.log('Foobar');
-    }else if(i%3 ===0){
-        console.log('Foo');
-    }else if(i%7===0){
-        console.log('Bar')
-    }else{
-        console.log(i);
+else{
+    for(let i = 1;i<=n;i++){
+        if(i % 3 ===0 && i % 7 ===0){
+            console.log("FooBar");
+        } else if(i % 3 === 0){
+            console.log('Foo');
+        }else if(i % 7 === 0){
+            console.log('Bar');
+        }
+        else{
+            console.log(i);
+        }
+        }
     }
-}

@@ -1,9 +1,14 @@
-export{};
+const n: number = parseFloat(process.argv[2]);
 
-const num=+process.argv[2];
-let sum=0;
-if(Number.isNaN(num)||num<0){
-    console.log("Invalid input")
-    process.exit()
-} for(let i = 1;i<=num;i++) sum += i;
-console.log(`Sum: ${sum}`);
+
+if (Number.isNaN(n) || n < 0 || !Number.isInteger(n)) {
+  console.log('Invalid Input');
+} 
+else {
+  let sum = 0;
+
+  for (let i = 1; i <= n; i++) {
+    sum += i;
+  }
+  console.log('Sum: ' , sum);
+}

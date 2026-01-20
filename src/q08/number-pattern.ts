@@ -1,18 +1,13 @@
-export{};
+const n: number = parseFloat(process.argv[2]);
+if (isNaN(n) || n < 1 || !Number.isInteger(n)) {
+    console.log("Invalid Input")
+} else {
 
-
-let num = +process.argv[2];
-
-if(Number.isNaN(num) || num<=0){
-    console.log("Invalid input")
-    process.exit()
-}
-let result = '';
-for(let i = num;i > 0;i--){
-    for(let j = i;j > 0;j--) {
-        result += j;
+    for (let i = n; i > 0; i--) {
+        let line = ""
+        for (let j = i; j > 0; j--) {
+            line += j;
+        }
+        console.log(line)
     }
-    result += '\n'
 }
-console.log(result);
-export {};

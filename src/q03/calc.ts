@@ -1,40 +1,17 @@
+const op: string = process.argv[2];
+const n1: number = parseFloat(process.argv[3]);
+const n2: number = parseFloat(process.argv[4]);
 
-const args = process.argv.slice(2);
-const op = args[0];            
-const num1 = Number(args[1]);  
-const num2 = Number(args[2]);  
-
-
-if (isNaN(num1) || isNaN(num2)) {
-    console.error("Invalid input");
-    process.exit(1);
+if(isNaN(n1)||isNaN(n2)||(op ==='div' && n2===0)){
+    console.log('Invalid input');
+}else if(op=== 'add'){
+    console.log(n1+n2);
+}else if(op=== 'sub'){
+    console.log(n1-n2)
+}else if(op==="mul"){
+    console.log(n1*n2)
+}else if(op==='div'){
+    console.log(n1/n2)
+}else{
+    console.log('Invalid operator')
 }
-
-
-let result: number;
-
-switch (op) {
-    case 'add':
-        result = num1 + num2;
-        break;
-    case 'sub':
-        result = num1 - num2;
-        break;
-    case 'mul':
-        result = num1 * num2;
-        break;
-    case 'div':
-   
-        if (num2 === 0) {
-            console.error("Error: Cannot divide by zero.");
-            process.exit(1);
-        }
-        result = num1 / num2;
-        break;
-    default:
-        console.error("Error: Invalid operator. Use add, sub, mul, or div.");
-        process.exit(1);
-}
-
-
-console.log(result);
